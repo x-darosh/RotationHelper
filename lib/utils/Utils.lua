@@ -13,7 +13,7 @@ local SpellState = RotationHelper.SpellState
 function RotationHelper.Utils.getPlayerBuffsState(buffs)
     local buffIndex = {}
     if buffs and type(buffs) == "table" then
-        for _, buff in ipairs(buffs) do
+        for _, buff in pairs(buffs) do
             if buff.name and buff.alias then
                 buffIndex[buff.name] = buff.alias
             end
@@ -46,7 +46,7 @@ end
 function RotationHelper.Utils.getTargetDebuffsState(debuffs)
     local debuffIndex = {}
     if debuffs and type(debuffs) == "table" then
-        for _, debuff in ipairs(debuffs) do
+        for _, debuff in pairs(debuffs) do
             if debuff.name and debuff.alias then
                 debuffIndex[debuff.name] = debuff.alias
             end
@@ -86,7 +86,7 @@ function RotationHelper.Utils.getSpellsState(spells)
     local spellsState = {}
 
     if spells then
-        for _, spell in ipairs(spells) do
+        for _, spell in pairs(spells) do
             local usable, nomana = IsUsableSpell(spell.name)
             spellsState[spell.alias] = SpellState:new(nomana, usable)
         end

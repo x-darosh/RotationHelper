@@ -90,7 +90,7 @@ local rotationConditionFunction = function(context)
                     context.resources.runes.unholy == 0 and context.resources.runes.frost == 1) or
                 (context.playerHasBuffs({ "unholyPresense" }) and
                     (not context.states.player.spells.summonGargoyle.usable and not context.states.player.spells.summonGargoyle.nomana) and
-                    not context.spellsAreUsable({ "bloodSPresense" }))),
+                    not context.spellsAreUsable({ "bloodPresense" }))),
 
         empowerRuneWeapon = context.spellsAreUsable({ "empowerRuneWeapon" }) and
             not context.resources.runes.hasActiveRunes,
@@ -100,7 +100,7 @@ local rotationConditionFunction = function(context)
                 (not context.resources.runes.hasActiveRunes and context.resources.power < 40)),
         bloodPresense = context.playerHasBuffs({ "unholyPresense" }) and
             (not context.states.player.spells.summonGargoyle.usable and not context.states.player.spells.summonGargoyle.nomana) and
-            context.spellsAreUsable({ "bloodSPresense" })
+            context.spellsAreUsable({ "BloodPresense" })
     }
     return obj
 end

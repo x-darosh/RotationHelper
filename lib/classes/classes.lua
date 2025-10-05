@@ -1,7 +1,8 @@
-local Class = RotationHelper.Class
 if not RotationHelper then
     RotationHelper = {}
 end
+
+local Class = RotationHelper.Class
 
 if not RotationHelper.Classes then
     RotationHelper.Classes = {}

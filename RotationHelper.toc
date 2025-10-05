@@ -1,6 +1,5 @@
 ## Interface: 30300
 ## Title: RotationHelper
-## Notes: Rotation helper for Death Knight Unholy spec
 ## Author: x-darosh
 ## Version: 1.0.0
 
@@ -11,9 +10,10 @@ core\Resource.lua
 core\Rotation.lua
 core\Spell.lua
 core\SpellState.lua
+core\Spec.lua
 
 lib\utils\Utils.lua
 lib\classes\classes.lua
-lib\classes\DeathKnight\roles\damageDealer\specs\unholy.lua
+lib\classes\DeathKnight\roles\damageDealer\specs\Unholy.lua
 
 index.lua
